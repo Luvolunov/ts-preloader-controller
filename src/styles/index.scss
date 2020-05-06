@@ -1,0 +1,75 @@
+@import "vars.scss";
+
+%fill-parent{
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+@mixin fill-parent-with-position($position) {
+    position: $position;
+    @extend %fill-parent;
+}
+
+.preloader{
+    @include fill-parent-with-position(fixed);
+    z-index: 10000;
+    background-color: $charcoal-color;
+    color: $cultured-color;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &.hidden{
+        display: none;
+    }
+
+    &__content-outer{
+        position: relative;
+    }
+
+    &__spinner-outer{
+        @include fill-parent-with-position(absolute);
+        animation: rotating 4s infinite;
+    }
+
+    &__spinner{
+        width: 50px;
+        height: 50px;
+        @extend %circle;
+        position: absolute;
+        background-color: $cultured-color;
+        left: -70px;
+        top: -15px;
+        animation: color-changing 16s infinite;
+    }
+}
+
+@keyframes rotating{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes color-changing{
+    0%{
+        background-color: $cultured-color;
+    }
+    25%{
+        background-color: $light-gray-color;
+    }
+    50%{
+        background-color: $tumbleweed-color;
+    }
+    75%{
+        background-color: $terra-cota-color;
+    }
+    100%{
+        background-color: $cultured-color;
+    }
+}

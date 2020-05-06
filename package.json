@@ -1,6 +1,6 @@
 {
-  "name": "@luvolunov/ts-preloader-controller",
-  "version": "1.2.3",
+  "name": "@dev-boost/ts-preloader-controller",
+  "version": "1.2.4",
   "description": "",
   "main": "build/index.js",
   "types": "build/index.d.ts",
@@ -14,7 +14,8 @@
     "preloader",
     "controller",
     "out-box",
-    "luvolunov"
+    "development",
+    "boost"
   ],
   "author": "Vladimir Luvolunov",
   "repository": {

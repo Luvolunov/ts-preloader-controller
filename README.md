@@ -11,7 +11,7 @@ Simple preloader controller, simple intro
 Enter in console this
 
 ```
-npm i @luvolunov/ts-preloader-controller 
+npm i @dev-boost/ts-preloader-controller 
 ```
 
 ### Adding to project
@@ -19,8 +19,8 @@ npm i @luvolunov/ts-preloader-controller
 Just import controller from package. If you don't have preloader, then package does it for you
 
 ```
-import "@luvolunov/ts-preloader-controller/styles/index.scss"; // if you don't have preloader
-import { PreloaderController } from "@luvolunov/ts-preloader-controller"; 
+import "@dev-boost/ts-preloader-controller/styles/index.scss"; // if you don't have preloader
+import { PreloaderController } from "@dev-boost/ts-preloader-controller"; 
 
 const preloader = new PreloaderController();
 
